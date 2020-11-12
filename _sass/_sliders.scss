@@ -6,6 +6,10 @@
     margin-top: 55px;
 }
 
+.fullpage-slider-iframe {
+    margin-top: -11% !important;
+}
+
 #fullpage {
     margin-top: 70px;
 }
@@ -17,15 +21,15 @@
 
 // Preloader
 #page-loader {
-    position: fixed;
-    top: 75px;
+	position: fixed;
+	top: 75px;
     bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1000;
-    background: #FFF none repeat scroll 0% 0%;
-    z-index: 99999;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	background: #FFF none repeat scroll 0% 0%;
+	z-index: 99999;
 }
 #page-loader .preloader-interior {
     display: block;
