@@ -21,11 +21,17 @@ image: tb-logo.png
 
 #Descripción de tu sitio
 description: >-
-  TowerBuilder is a system to generate websites with data visualizations that mix open contracting and beneficial ownership data, all without requiring programming knowledge.
+  TowerBuilder es un sistema para generar sitios web con visualizaciones de datos que combinan datos de contrataciones abiertas y beneficiarios reales, todo sin necesidad de conocimientos de programación.
 
+# Activa el menu de arriba: true o false
+top_menu: true
+
+# Personaliza el título del botón del menú Más información
+menu_button_title: Más información
 
 # URL del archivo de contratos o del endpoint de tu API
-contracts_url: "/assets/data/contracts.json"
+contracts_url: "/assets/data/contracts.csv"
+#contracts_url: "https://api.beta.quienesquien.wiki/v2/contracts?sort=-compiledRelease.total_amount&compiledRelease.parties.memberOf.name=%2FGrupo%20Aeroportuario%2Fi&debug=true&limit=614"
 
 # URL del archivo de beneficial ownership o del endpoint de tu API
 bods_url: ""
@@ -53,12 +59,14 @@ graph:
           - toContractType: '#706F74'
           - toOrganization: '#706F74'
   - descriptionLink: "Ir al perfil"
-  
-# Personaliza el título del botón del menú Más información
-menu_button_title: Más información
 
-# Personaliza los títulos y placeholders de los inputs
-# en el Buscador de contratos
+  #Formato de contracts_url: releases_json, records_json_api, csv
+  # releases_json: {releases: [] }
+  # records_json_api: {data: { records: [ {compiledRelease: {} }] } }
+  # csv: un archivo csv
+  - contracts_format: "csv"
+
+# Personaliza los títulos y placeholders de los inputs en el buscador de contratos
 contracts_title: Contratos por empresas
 search_title: Búsqueda
 search_placeholder: Introduce palabra clave a buscar
@@ -77,7 +85,7 @@ date_range_to_placeholder: hasta
 date_range_title_tooltip: Encuentra los contratos activos entre dos fechas.
 filter_footnote_title: Los filtros aplican sobre los contratos que tienen las empresas.
 # Personaliza los títulos de la tabla
-column_1: Empresas 
+column_1: Empresas
 column_2: Cant. de contratos
 column_3: Monto total
 
@@ -87,7 +95,7 @@ plugins:
   - jekyll-sitemap
 
 # Excluir del procesamiento.
-# Los siguientes elementos no se procesarán de forma predeterminada. 
+# Los siguientes elementos no se procesarán de forma predeterminada.
 # Crea una lista personalizada para anular la configuración predeterminada.
 exclude:
   - Gemfile
@@ -102,6 +110,10 @@ collections:
   first-slider:
     output: true
   visualization-slider:
+    output: true
+  home:
+    output: true
+  footer:
     output: true
 
 # Cambia a false para ocultar extractos en la página de publicaciones.
