@@ -13,8 +13,8 @@ layout: default
             <p class="text-muted">
               <time datetime="{{ page.date | date_to_xmlschema }}">
                 {% include translated_date.html date=page.date format=site.date-format lang=site.date-language %}
-                <!-- {%- assign date_format = "%b %-d, %Y" -%} -->
-                <!-- {{ page.date | date: date_format }} -->
+                <!-- {%- assign date_format = "%b %-d, %Y" -%}
+                {{ page.date | date: date_format }} -->
               </time>
               {%- if page.author -%}
                 • {{ page.author }}

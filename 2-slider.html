@@ -30,16 +30,16 @@ permalink: /slider/
 
 <script type="text/javascript">
 	//Inicializing sliders
-	$(function() {
+$(document).ready(function() {
 	  $('#fullpage-slider').fullpage({
 	    verticalCentered: true,
 	    navigation: true,
 	    anchors: anchors,
 	    menu: '#menu',
-	    responsiveSlides: true,
+	    lazyLoading: true,
 	    paddingTop: '10px',
 		paddingBottom: '30px',
-	    responsiveWidth: 992,
+		responsiveWidth: 992,
         afterResponsive: function(isResponsive){
         },
         afterRender: function(){
