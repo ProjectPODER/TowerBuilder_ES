@@ -93,6 +93,7 @@ column_3: Monto total
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-analytics
 
 # Excluir del procesamiento.
 # Los siguientes elementos no se procesarán de forma predeterminada.
@@ -126,3 +127,9 @@ date-language: "es"
 # Configura el formato de las fechas en las páginas de publicaciones.
 # Otros formatos: "%a, %b %d, %y" | "%Y" | "%b %d, %y" | "%Y-%m-%d %H:%M"
 date-format: "%B %-d, %Y"
+
+# Configuración de analytics (para más opciones, ve la documentación)
+jekyll_analytics:
+  GoogleAnalytics:          # Add, if you want to track with Google Analytics
+    id: UA-123-456          # Required - replace with your tracking id
+    anonymizeIp: false      # Optional - Default: false - set to true for anonymized tracking
